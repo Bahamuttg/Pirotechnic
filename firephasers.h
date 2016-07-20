@@ -2,6 +2,7 @@
 #define FIREPHASERS_H
 
 #include <QThread>
+#include "shiftinterface.h"
 
 class FirePhasers : public QThread
 {

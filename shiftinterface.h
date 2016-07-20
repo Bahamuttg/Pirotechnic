@@ -6,15 +6,19 @@
 class ShiftInterface
 {
 private:
-    int OE_Prime;
-    int SH_CLK;
-    int SH_LCK;
+
+
+    void InitGPIO ();
+    void WriteShift(int );
 
 public:
-    ShiftInterface(int, int, int);
+    int SR_CLK;
+    int SER_DATA;
+    int RCLK_LATCH;
+    int PIN_COUNT;
+
+    ShiftInterface(int SRCLK, int SER, int RCLK, int PINCOUNT);
     ~ShiftInterface();
-    void InitGPIO();
-
+    void WriteShift(int[]);
 };
-
-#endif // SHIFTINTERFACE_H
+#endif
